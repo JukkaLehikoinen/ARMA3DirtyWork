@@ -1,0 +1,280 @@
+respawn = 3;
+respawnDelay= 2;
+respawnvehicledelay = 30;
+respawnTemplatesEast[] = {"MenuPosition"};
+
+respawnOnStart = 0;
+OnLoadName= "Dirtywork";
+briefing=1;
+debriefing =1;
+
+#include "defines.hpp"
+#include "dialogs.hpp"
+#include "dialogs2.hpp"
+#include "dialogs3.hpp"
+#include "diagrebelkauppa.hpp"
+
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "";
+		description = "You have successfully conquered south island of Tanoa.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
+
+
+
+class CfgMusic
+{
+	tracks[] = {};
+	class musiikki
+	{
+		name	= "musiikki";
+		sound[]	= { "sfx\musiikki.ogg", db + 20, 1.0 };
+	};
+};
+
+class CfgSounds
+{
+   sounds[]={};	
+	
+	class welcome
+	{
+		name = "welcome";sound[] = {"sfx\welcome.ogg", db +30, 1};
+		titles[] = {};
+	};
+	
+	class hissimusa
+	{
+		name = "hissimusa";sound[] = {"sfx\hissimusa.ogg", db +20, 1};
+		titles[] = {};
+	};
+	
+	class musiikki
+	{
+		name = "musiikki";sound[] = {"sfx\musiikki.ogg", db +20, 1};
+		titles[] = {};
+	};
+	
+	class tausta
+	{
+		name = "tausta";sound[] = {"sfx\tausta.ogg", db +20, 1};
+		titles[] = {};
+	};
+	class panic
+	{
+		name = "panic";sound[] = {"sfx\elpanic.ogg", 1, 1};
+		titles[] = {};
+	};
+	class panic2
+	{
+		name = "panic2";sound[] = {"sfx\elpanic1.ogg", 1, 1};
+		titles[] = {};
+	};
+	class gun
+	{
+		name = "gun";sound[] = {"sfx\gun.ogg", 1, 1};
+		titles[] = {};
+	};
+	class siren2
+	{
+		name = "siren2";sound[] = {"sfx\siren2.ogg", db +30, 1};
+		titles[] = {};
+	};
+	class vasili1
+	{
+		name = "vasili1";sound[] = {"sfx\vasili1.ogg", db +13, 1};
+		titles[] = {};
+	};
+	
+	class rosvo2
+	{
+		name = "rosvo2";sound[] = {"sfx\rosvo2.ogg", db +13, 1};
+		titles[] = {};
+	};
+	class rosvo3
+	{
+		name = "rosvo3";sound[] = {"sfx\rosvo3.ogg", db +13, 1};
+		titles[] = {};
+	};
+	class rosvo1
+	{
+		name = "rosvo1";sound[] = {"sfx\rosvo1.ogg", db +13, 1};
+		titles[] = {};
+	};	
+	class respa
+	{
+		name = "respa";sound[] = {"sfx\respa.ogg", db +50, 1};
+		titles[] = {};
+	};	
+	
+	class steve1
+	{
+		name = "steve1";sound[] = {"sfx\steve1.ogg", db +13, 1};
+		titles[] = {};
+	};	
+	class steve2
+	{
+		name = "steve2";sound[] = {"sfx\steve2.ogg", db +13, 1};
+		titles[] = {};
+	};
+	class steve3
+	{
+		name = "steve3";sound[] = {"sfx\steve3.ogg", db +13, 1};
+		titles[] = {};
+	};	
+
+	class moka
+	{
+		name = "moka";sound[] = {"sfx\moka.ogg", db +13, 1};
+		titles[] = {};
+	};	
+
+		
+};
+class CfgRadio
+{
+	class toimitus1
+	{
+	name = "toimitus1";
+	sound[] = { "sfx\toimitus1.ogg", db+30, 1 };
+		title = "Mister, thank you for buying guns from my shop. Deliverytime is few minutes";
+	};
+
+	class toimitus2
+	{
+	name = "toimitus2";
+	sound[] = { "sfx\toimitus2.ogg", db+30, 1 };
+		title = "";
+	};
+	
+	class toimitus4
+	{
+	name = "toimitus4";
+	sound[] = { "sfx\toimitus4.ogg", db+30, 1 };
+		title = "Mister, Spasibo for guns from my shop. Delivery time is a few seconds. khorosho.";
+	};
+
+	class target1
+	{
+	name = "target1";
+	sound[] = { "sfx\target1.ogg", db+30, 1 };
+		title = "There is a target at Lijnhaven. The price is 1000. Do you accept this mission?";
+	};
+
+	class target3
+	{
+	name = "target3";
+	sound[] = { "sfx\target3.ogg", db+30, 1 };
+		title = "There is a terrorists plot against us at Saioko. You need to destroy fueltanks from there. Prize is 1500 dollars. Do you accept this mission? You have 60 seconds to response.";
+	};
+	
+	class target2
+	{
+	name = "target2";
+	sound[] = { "sfx\target2.ogg", db+30, 1 };
+		title = "Location is on the map.";
+	};
+
+	class valta1
+	{
+	name = "valta1";
+	sound[] = { "sfx\valta1.ogg", db+30, 1 };
+		title = "First town is conquered, 1000 dollars are transferred to your account.";
+	};
+	class valta2
+	{
+	name ="valta2";
+	sound[] = { "sfx\valta2.ogg", db+30, 1};
+		title = "Lijnhaven is captured, capturing prize is 3000 dollars.";
+	};
+
+	class valta3
+	{
+	name ="valta3";
+	sound[] = { "sfx\valta3.ogg", db+30, 1};
+		title = "Doodstil is captured, prize is 2000 dollars. The money is transferred to your account.";
+	};
+	
+	class valta4
+	{
+	name ="valta4";
+	sound[] = { "sfx\valta4.ogg", db+30, 1};
+		title = "Harcourt is captured, prize is 2600 dollars.";
+	};	
+
+	class comevisit
+	{
+	name ="comevisit";
+	sound[] = { "sfx\comevisit.ogg", db+30, 1};
+		title = "";
+	};
+	
+	class steve21
+	{
+	name ="steve21";
+	sound[] = { "sfx\steve21.ogg", db+30, 1};
+		title = "";
+	};
+	
+	class vasili1
+	{
+		name = "vasili1";
+	sound[] = {"sfx\vasili1.ogg", db +13, 1};
+		title = "";
+	};
+	class vasili2
+	{
+		name = "vasili2";
+	sound[] = {"sfx\vasili2.ogg", db +13, 1};
+		title = "";
+	};
+	class vasili3
+	{
+		name = "vasili3";
+	sound[] = {"sfx\vasili3.ogg", db +13, 1};
+		title ="";
+	};
+	class vasili4
+	{
+		name = "vasili4";
+	sound[] = {"sfx\vasili4.ogg", db +13, 1};
+		title = "";
+	};
+
+	class loppu1
+	{
+	name = "loppu1";
+	sound[] =  {"sfx\loppu1.ogg", db +30,1};
+	title = "Your main objectives are completed, please proceed to extraction point.";
+	};
+
+	class loppu2
+	{
+	name= "loppu2";
+	sound[] = {"sfx\loppu2.ogg", db +30,1};
+	title = "The agency thanks for the cooperation, hopefully we will continue to work in the future";
+	};
+
+	class stevedyna1
+	{
+	name = "stevedyna1";
+	sound[] = { "sfx\stevedyna1.ogg", db+30, 1 };
+		title = "";
+	};
+	
+	class stevedyna2
+	{
+	name = "stevedyna2";
+	sound[] = { "sfx\stevedyna2.ogg", db+30, 1 };
+		title = "";
+	};
+
+};
+
